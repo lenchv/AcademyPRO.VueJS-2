@@ -2,10 +2,10 @@
   <div class="col-sm-3">
     <div class="card">
         <div class="card-body">
-            <div class="card-title">{{ user.name }}</div>
+            <h5 class="card-title">{{ user.name }}</h5>
             <p class="card-text">{{ user.email }}</p>
-            <a class="btn btn-outline-danger" @click="deleteUser(user)">Delete</a>
-            <a class="btn btn-primary" @click="editUser(user, user)">Edit</a>
+            <a href="#" class="btn btn-primary" @click.prevent="editUser(user, user)">Edit</a>
+            <a href="#" class="btn btn-outline-danger" @click.prevent="deleteUser(user)">Delete</a>
         </div>
     </div>
   </div>

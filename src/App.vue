@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import 'bootstrap/dist/css/bootstrap.min.css';
 import UserList from './components/UserList.vue'; 
 
 export default {
@@ -31,5 +32,4 @@ export default {
 </script>
 
 <style lang="scss">
-  
 </style>
