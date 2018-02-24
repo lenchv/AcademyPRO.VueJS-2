@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import userService from '../services/userService';
 import UserItem from './UserItem.vue';
 
 export default {
@@ -28,15 +29,11 @@ export default {
 
     methods: {
         deleteUser(user) {
-            const i = this.users.indexOf(user);
-
-            if (i !== -1) {
-                this.users.splice(i, 1);
-            }
+            userService.deleteUser(this.users, user);
         },
 
         editUser(user, data) {
-
+            userService.editUser(user, data);;
         }
     }
 }

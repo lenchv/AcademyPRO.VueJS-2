@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <header>
+    <app-header>
       <div class="col">
         <add-user @addUser="addUser"></add-user>
       </div>
-    </header>
+    </app-header>
     <user-list 
       v-bind:users="users"
     />
@@ -22,7 +22,9 @@ import userService from './services/userService';
 export default {
   name: 'app',
   components: {
-    UserList, Header, AddUser
+    "app-header": Header, 
+    UserList, 
+    AddUser
   },
   data () {
     return {
