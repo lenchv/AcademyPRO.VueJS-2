@@ -28,16 +28,19 @@ export default {
   },
   data () {
     return {
-      users: [
-        userService.getUser({ name: "Ivan", email: "ivan@mail.com" }),
-        userService.getUser({ name: "Petro", email: "petro@mail.com" })
-      ]
+      users: []
     }
   },
   methods: {
     addUser(data) {
-      this.users.push(userService.getUser(data));
+      this.users.push(userService.addUser(data));
     }
+  },
+
+  created() {
+    userService.getUsers().then((users) => {
+      users.forEach(user => this.users.push(user));
+    }).catch(console.error);
   }
 }
 </script>
