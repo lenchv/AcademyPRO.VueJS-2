@@ -1,9 +1,7 @@
 <template>
-  <div class="container">
-      <div class="row">
-          <slot></slot>
-      </div>
-  </div>
+    <nav class="navbar navbar-light bg-light">
+        <slot></slot>
+    </nav>
 </template>
 
 <script>

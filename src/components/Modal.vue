@@ -70,6 +70,13 @@ export default {
         ok() {
             this.$emit('onOk');
         }
+    },
+
+    destroyed() {
+        if (this.backdrop) {
+            document.body.classList.remove('open-modal');
+            this.backdrop.remove();
+        }
     }
 }
 </script>

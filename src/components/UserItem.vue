@@ -47,3 +47,10 @@ export default {
     }
 }
 </script>
+
+<style>
+    .card {
+        margin: 15px 0;
+    }
+</style>
+
